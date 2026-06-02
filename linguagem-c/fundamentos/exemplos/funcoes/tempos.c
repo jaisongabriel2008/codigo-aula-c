@@ -1,35 +1,37 @@
 #include <stdio.h>
 
-
-float calcular_total_horas_curso(int semestres, float horas_semanais, float semanas_por_mes) {
-    int meses_por_semestre = 5;
+//variavel 
+float calcular_horas_estudadas(int total_semestres, float horas_na_semana, float semanas_mes) {
+    int meses_por_periodo = 5;
     
-    // Total de meses de aula em todo o curso
-    int total_meses = semestres * meses_por_semestre;
+    int total_meses_curso = total_semestres * meses_por_periodo;
     
-    // Total de semanas de aula em todo o curso
-    float total_semanas = total_meses * semanas_por_mes;
+    float total_semanas_curso = total_meses_curso * semanas_mes;
     
-    // Cálculo final das horas
-    float total_horas = total_semanas * horas_semanais;
+    float conta_final_horas = total_semanas_curso * horas_na_semana;
     
-    return total_horas;
 }
 
 int main() {
+    int meus_semestres = 0;
+    float minhas_horas_semanais = 0.0;
+    float semanas_no_mes = 4.0;
+    float resultado_do_calculo = 0.0;
 
-    int semestres = 4;            
-    float horas_semanais = 15.0;  
-    float semanas_por_mes = 4.0;  
+    printf("Olá! Vamos calcular o tempo do seu curso?\n");
     
-    // Chamada da função
-    float horas_totais = calcular_total_horas_curso(semestres, horas_semanais, semanas_por_mes);
-    
-    // Exibição das perguntas
-    printf("--- Resumo do Curso ---\n");
-    printf("Duracao do curso: %d semestres\n", semestres);
-    printf("Carga horaria semanal: %.1f horas\n", horas_semanais);
-    printf("Total estimado: %.1f horas de curso\n", horas_totais);
-    
+    printf("Quantos semestres tem o seu curso? ");
+    scanf("%d", &meus_semestres);
+
+    printf("Quantas horas você estuda por semana? ");
+    scanf("%f", &minhas_horas_semanais);
+
+    resultado_do_calculo = calcular_horas_estudadas(meus_semestres, minhas_horas_semanais, semanas_no_mes);
+
+    printf("\n--- Aqui está o seu resultado ---\n");
+    printf("Tempo total de curso: %d semestres\n", meus_semestres);
+    printf("Sua dedicação semanal: %.1f horas\n", minhas_horas_semanais);
+    printf("No final do curso, você terá acumulado: %.1f horas de carga horária!\n", resultado_do_calculo);
+
     return 0;
 }

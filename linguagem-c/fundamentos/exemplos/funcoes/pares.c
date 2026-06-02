@@ -1,26 +1,28 @@
+
 #include <stdio.h>
 
-int main (){
+int main() {
+    //Variavel 
+    int numero_inicio = 0;
+    int numero_fim = 0;
+    int contador = 0;
+   
+    // Perguntas 
+    printf("Digite o numero inicial: ");
+    scanf("%d", &numero_inicio);
 
-    float n1 = 0;
-    float n2 = 0;
+    printf("Digite o numero final: ");
+    scanf("%d", &numero_fim);
 
-    printf("\nQual o primeiro numero? ");
-    scanf("%f", &n1);
+    printf("\n Numeros pares encontrados\n");
 
-     printf("\nQual o segundo numero? ");
-    scanf("%f", &n2);
-
-
-    void mostrarPares(int inferior, int superior) {
-    for (int i = inferior; i <=superior; i++) {
-        if(i % 2==0){
-            printf("\n%d", i);
+    for (contador = numero_inicio; contador <= numero_fim; contador++) {
+        if (contador % 2 == 0) {
+            printf("Achei um par: %d\n", contador);
         }
     }
-}
 
- mostrarPares(n1, n2);
+    printf("\nPronto, todos os pares mostrados!\n");
 
     return 0;
-}                                            
+}

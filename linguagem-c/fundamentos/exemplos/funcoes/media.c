@@ -2,7 +2,7 @@
 #include <locale.h>
 
 void ola () {
-    printf ("Seja bem cindo!");
+    printf ("Seja bem vindo!");
 }
  
 void calcularMedia( float n1, float n2) {
@@ -11,17 +11,17 @@ void calcularMedia( float n1, float n2) {
   
             
 }
-
+  
 int main () {
 
-    //setlocale(LC_ALL, "pt_BR.UTF-8")
+
     setlocale(LC_ALL, "Portuguesa");
 
-    ola(); //Executando a funcao
+    ola(); //Executacao
   calcularMedia (4.5, 8.9);
 
 
-  float n1 = 0;  
+float n1 = 0;  
 float n2 = 0; 
 
 printf ("\nQual a primeira nota?");
