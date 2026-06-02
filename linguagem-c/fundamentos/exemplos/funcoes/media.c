@@ -4,7 +4,7 @@
 void ola () {
     printf ("Seja bem cindo!");
 }
-
+ 
 void calcularMedia( float n1, float n2) {
   float media = n1 + n2 /2;
  printf ("\n A media é: %.2f", media);
